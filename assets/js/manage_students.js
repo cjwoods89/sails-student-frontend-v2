@@ -81,6 +81,7 @@
 
       });
 
+
     //add student button functionality
     addStudentButton.click(function(){
 

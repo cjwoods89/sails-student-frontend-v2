@@ -43,17 +43,15 @@
             required: true,
             minlength: 2
           },
-          start_date: {
-            required: true,
-            dateISO: true
+          yrs_exp: {
+            min: 0
           },
-          gpa: {
+          major_id: {
+            min: 0
+          },
+          tenured: {
             min: 0,
-            max: 4.0
-          },
-          sat: {
-            min: 400,
-            max: 1400
+            max: 1
           }
         },
         messages: {
@@ -65,17 +63,15 @@
             required: "I pity the fool that leaves this blank",
             minlength: jQuery.validator.format("PICNIC ERROR: Please add at least two characters!") // Problem in chair, not in computer
           },
-          start_date: {
-            required: "I pity the fool that leaves this blank",
-            dateISO: "ID10T ERROR: You have to use YYYY-MM-DD format!" // Idiot error
-          },
-          gpa: {
+          yrs_exp: {
             min: jQuery.validator.format("PEBKAC ERROR: Below the allowable limit!"), // Problem exists between keyboard and chair
-            max: jQuery.validator.format("IBM ERROR: Above the allowable limit!") // Idiot Behind Machine
           },
-          sat: {
+          major_id: {
             min: jQuery.validator.format("PEBKAC ERROR: Below the allowable limit!"), // Problem exists between keyboard and chair
-            max: jQuery.validator.format("IBM ERROR: Above the allowable limit!") // Idiot Behind Machine
+          },
+          tenured: {
+            min: jQuery.validator.format("PEBKAC ERROR: Can only be 0 or 1!"), // Problem exists between keyboard and chair
+            max: jQuery.validator.format("IBM ERROR: Can only be 0 or 1!") // Idiot Behind Machine
           }
         }
 
@@ -134,7 +130,7 @@
       })
 
       manageInstructorForm.dialog({
-        title: "Add Record",
+        title: "Update Record",
         width: 700,
         modal: true,
         buttons: {

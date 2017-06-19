@@ -54,6 +54,11 @@ module.exports.routes = {
   'POST /create_instructor': 'InstructorController.create',
   'GET /manage_instructors': 'InstructorController.read',
   'POST /update_instructor': 'InstructorController.update',
-  'POST /delete_instructor': 'InstructorController.delete'
+  'POST /delete_instructor': 'InstructorController.delete',
+
+  'POST /create_class': 'ClassController.create',
+  'GET /manage_classes': 'ClassController.read',
+  'POST /update_class': 'ClassController.update',
+  'POST /delete_class': 'ClassController.delete'
 
 };
