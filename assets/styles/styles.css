@@ -29,3 +29,19 @@ th, tr {
   margin-left: auto;
   margin-right: auto;
 }
+
+#title {
+  margin: 0;
+  /*padding-top: 0;*/
+  padding: 0 !important;
+  position: relative;
+  top: -20px;
+}
+
+#footer {
+  margin-bottom: 0;
+  color: lightgray !important;
+  /*height: 200px;*/
+  line-height: 50px;
+  text-align: center;
+}
